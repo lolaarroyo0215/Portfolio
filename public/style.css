@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+header{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.banner{
+    background-color: #E5E5E5;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    width: 100vw;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    list-style: none;
+}
+.navbar ul li{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #14213D;
+    justify-content: space-around;
+    height: 100%;
+    font-family: "Edu VIC WA NT Beginner", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: medium;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar li:hover{
+    background-color: #FCA311;
+    color: white;
+}
+
+body{
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: white;
+}
+
+.wrap{
+    overflow: auto;
+    padding-bottom: 90px;
+}
+
+/*Carousel*/
+.container{
+    padding: 2rem;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); /* x-offset, y-offset, blur, spread, color(hue, saturation, lightness, alpha) */
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%; /*flex grow = 1 sets every image to same size, flex shrink = 0 image will retain width is needs and not wrap its content, flex spaces = 100% every image will have an initial size of 100%*/
+    object-position: center;
+    scroll-snap-align: start; /*image will snap at the start of the image element*/
+    object-fit: cover; /*fill height and width of parent container while maintaining og aspect ratio */
+}
+
+.slider img #slide-2{
+    width: 48rem;
+    height: auto;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%); /*move the navigation to the left by half of its width*/
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #14213D;
+    opacity: 0.75;
+    transition: opacity ease 250ms; /* target opacity, setting animation timing function to ease, setting animation to 250ms */
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+.brief-intro{
+    text-align: center;
+    font-size: medium;
+}
+
+.about{
+    background-color: #14213D;
+    color: white;
+    text-align: left;
+    padding: 4rem;
+    margin-top: 2rem;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+.about a{
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.about a:hover{
+    color: #FCA311;
+}
+
+.project-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.project-wrapper p{
+    width: 100%;
+    text-align: center;
+    font-family: "Edu VIC WA NT Beginner", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: xx-large;
+}
+
+.project-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    width: 100%;
+}
+
+.project-container p{
+    padding-left: 30px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    text-align: left;
+}
+
+.description{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: left;
+    color: #14213D;
+}
+
+.title{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-align: left;
+    background-color: #E5E5E5;
+    color: #14213D;
+}
+
+.project{
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    border-radius: 10px;
+    height: 25rem;
+    width: 22rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project img:hover{
+    opacity: 0.80;
+    webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+figure{
+    width: 22rem;
+}
+
+figcaption a{
+    padding-left: 2rem;
+}
+
+.experience{
+    background-color: grey;
+    color: white;
+    text-align: left;
+    height: 10rem;
+    padding: 2rem 8rem 2rem 6rem;
+    margin-top: 5rem;
+    font-family: "Edu VIC WA NT Beginner", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.experience a{
+    color: #14213D;
+    text-decoration: none;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+button{
+    background-color: #E5E5E5;
+    border-radius: 8px;
+    border: solid 1px #E5E5E5;
+    height: 2rem;
+    width: 10rem;
+}
+
+button:hover{
+    background-color: white;
+    height: 2.5rem;
+    width: 10.5rem;
+
+}
+
+@media screen and (max-width: 800px){
+    .project-container{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+        column-gap: 0;
+    }
+
+    .project{
+        width: 22rem;
+        height: 25rem;
+    }
+
+    .project img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+}
+
+.skills{
+    background-color: #14213D;
+    padding: 2rem 8rem 2rem 6rem;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    text-align: left;
+}
+.skills h4{
+    font-family: "Edu VIC WA NT Beginner", system-ui;
+    font-optical-sizing: auto;
+    background-color: white;
+    color: #14213D;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    padding: 1rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.intro{
+    margin: 3rem;
+    line-height: 1.5rem;
+    width: 85vw;
+}
+
+.intro h4{
+    display: block;
+    background-color: #E5E5E5;
+}
+
+.image img{
+    width: 100vw;
+    margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 800px){
+
+    .wrapper{
+        gap: 1rem;
+    }
+
+    .intro{
+        flex-direction: column;
+        width: 50vw;
+        margin-left: 2.5rem;
+        padding: 0;
+    }
+
+    .image img{
+        flex-direction: column;
+        width: 40vw;
+        height: 50vh;
+        margin: 6rem auto auto auto;
+    }
+
+    .skills{
+        justify-content: center;
+        padding: 2rem 12rem 2rem 12rem;
+    }
+    .skills h4{
+        justify-content: center;
+    }
+
+    .experience{
+        padding: 2rem 12rem 2rem 12rem;
+    }
+
+}
